@@ -41,7 +41,7 @@ Node* insertNode(Node* head, int pos, int val){
 void printList(Node *head) {
     Node *curr = head;
     while (curr != nullptr) {
-        cout << curr->val;   
+        cout << curr->data;   
         if (curr->next != nullptr) {
             cout << " -> ";
         }
@@ -55,8 +55,8 @@ int main(){
     head->next = new Node(2);
     head->next->next = new Node(4);
 
-    int val = 3, pos = 3;
-    head = insertPos(head, pos, val);
+    int val = 3, pos = 2;
+    head = insertNode(head, pos, val);
     printList(head);
 
     return 0;
